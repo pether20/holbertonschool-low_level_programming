@@ -10,16 +10,18 @@
   */
 int main(void)
 {
-	int n = 97;
+	int n = 48;
 
-	while (n <= 122)
+	while (n <= 57)
 	{
 		putchar(n);
+
+		if (n == 57)
+		break;
+
+		putchar(44);
+		putchar(' ');
 		n++;
-		if (n == 101 || n == 113)
-		{
-		n++;
-		}
 
 	}
 
