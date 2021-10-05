@@ -19,7 +19,6 @@ int main(void)
 
 		while (m <= 57)
 		{
-		
 		putchar(n);
 		putchar(m);
 
@@ -29,9 +28,7 @@ int main(void)
 		m++;
 		putchar(44);
 		putchar(' ');
-		
 		}
-
 		n++;
 
 	}
