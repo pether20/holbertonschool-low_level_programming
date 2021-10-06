@@ -1,28 +1,25 @@
 #include "main.h"
 
 /**
- * jack_bauer - print _putchar
- * @n: The inter to print
+ * jack_bauer - print _putcha
+ *
  *
  * Return: On success 1..
  */
 void jack_bauer(void)
 {
-	int m = 0;
-	int n = 0;
-	int b = 0;
-	int a = 0;
+	int m, n, a, b;
 	int x = 9;
 
-	while (m <= 2)
+	for (m = 0; m <= 2; m++)
 	{
-		while (n <= x)
+		for (n = 0; n <= x; n++)
 		{
 
-		while (b <= 5)
+		for (b = 0; b <= 5; b++)
 		{
 
-		while (a <= 9)
+		for (a = 0; a <= 9; a++)
 		{
 
 		_putchar('0' + m);
@@ -31,23 +28,14 @@ void jack_bauer(void)
 		_putchar('0' + b);
 		_putchar('0' + a);
 		_putchar('\n');
-		a++;
 		}
-
-		b++;
 		a = 0;
 		}
-
-		n++;
 		b = 0;
-		}
-
-		m++;
 		if (m == 2)
 		x = 3;
-
+		}
 		n = 0;
-
 	}
 
 }
