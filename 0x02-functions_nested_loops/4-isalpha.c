@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - print _putchar
+ * _isalpha - print _putchar
  * @c: The character to print
  *
  * Return: On success 1..
