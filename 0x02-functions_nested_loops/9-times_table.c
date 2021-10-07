@@ -21,6 +21,9 @@ void times_table(void)
 		d1 = r / 10;
 		d2 = r % 10;
 		_putchar(' ');
+		if (d1 == 0)
+		_putchar(' ');
+		else
 		_putchar('0' + d1);
 		_putchar('0' + d2);
 		if (n <= 8)
