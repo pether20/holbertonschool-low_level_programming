@@ -20,10 +20,11 @@ void times_table(void)
 		r = n * x;
 		d1 = r / 10;
 		d2 = r % 10;
+		if (n > 0)
 		_putchar(' ');
-		if (d1 == 0)
+		if (d1 == 0 && n > 0)
 		_putchar(' ');
-		else
+		else if (d1 > 0)
 		_putchar('0' + d1);
 		_putchar('0' + d2);
 		if (n <= 8)
