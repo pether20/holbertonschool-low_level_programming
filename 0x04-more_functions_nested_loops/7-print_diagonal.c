@@ -1,25 +1,25 @@
 #include "main.h"
 
 /**
- * print_diagonal - check the code.
+ * print_diagonal - print \ diagonale.
  * @n: int value
  * Return: Void.
  */
 void print_diagonal(int n)
 {
-	int i;
+	int x, y;
 
-	if (n < 0)
+	if (n <= 0)
 		_putchar('\n');
 	else
-	{
-	for (x = 0; x <=  n; x++)
-	{
-		for (y = 1; y < x; y++)
-			_putchar(92);
-		_putchar(' ');
+		{
+		for (x = 1; x <=  n; x++)
+		{
+			for (y = 1; y < x; y++)
+			_putchar(' ');
+		_putchar(92);
 		_putchar('\n');
-	}
+		}
 
 	}
 }
