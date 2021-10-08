@@ -2,8 +2,8 @@
 
 /**
  * print_line - check the code.
- *
- * Return: Always 0.
+ * @n: int value 
+ * Return: Void.
  */
 void print_line(int n)
 {
