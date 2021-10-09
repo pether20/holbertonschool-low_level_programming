@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * main - Print number from the 0 at 100.
@@ -20,9 +19,10 @@ int main(void)
 			printf("Fizz ");
 			else if (i % 5 == 0)
 			{
-				if (i == 100)
-				printf("Buzz\n");
-				printf("Buzz ");
+				if (i < 100)
+					printf("Buzz ");
+				else if (i == 100)
+					printf("Buzz\n");
 			}
 			else
 				printf("%d ", i);
