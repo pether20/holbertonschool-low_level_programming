@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_array - printse
+ * *_strcpy - printse
  * @dest: string
  * @src: string
  * Return: copy string
  */
-void print_array(int *dest, int *src)
+char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
 
