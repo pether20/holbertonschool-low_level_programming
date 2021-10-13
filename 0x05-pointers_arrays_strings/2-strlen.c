@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * int _strlen - leng string
+ * _strlen - leng string
  * @s: pointer char
  *
  * Return: Value
