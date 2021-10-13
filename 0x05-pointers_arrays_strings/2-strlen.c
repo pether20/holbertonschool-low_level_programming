@@ -6,7 +6,7 @@
  *
  * Return: Value
  */
-void int_strlen(char *s)
+int int_strlen(char *s)
 {
 	int i = 0;
 
