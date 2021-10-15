@@ -21,9 +21,9 @@ int _strcmp(char *s1, char *s2)
 		l2++;
 	if (l1 > l2)
 		val = 15;
-	else if(l1 < l2)
+	else if (l1 < l2)
 		val = -15;
-	else if(*s1 == *s2)
+	else if (*s1 == *s2)
 		val = 0;
 
 	return (val);
