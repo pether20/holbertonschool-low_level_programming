@@ -3,7 +3,7 @@
 /**
  * reverse_array -  revert string
  * @a: pointer s
- * @n: int 
+ * @n: int
  * Return: *a invert
  */
 void reverse_array(int *a, int n)
