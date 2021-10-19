@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_memset - constant byte
+ * *_memcpy - constant byte
  * @dest: character
  * @src: character
  * @n: int long
