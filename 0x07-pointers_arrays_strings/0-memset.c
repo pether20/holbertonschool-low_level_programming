@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * *_memset - constant byte
@@ -11,11 +11,13 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
-	unsigned char *memory = s;
+	char *memory;
+
+	memory = s;
 
 	for (i = 0; i < n; i++)
 	{
-		memory[i] = b;
+		*(s + i) = b;
 	}
 
 	return (memory);
