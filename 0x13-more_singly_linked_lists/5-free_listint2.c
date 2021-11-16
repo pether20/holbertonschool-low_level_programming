@@ -3,7 +3,7 @@ valgrind ./f #include "lists.h"
 #include <string.h>
 
 /**
- * free_listint22 - frees memory that listint_t.
+ * free_listint2 - frees memory that listint_t.
  * @head: listint_t listint.
  *
  */
