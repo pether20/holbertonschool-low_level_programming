@@ -1,4 +1,4 @@
-valgrind ./f #include "lists.h"
+#include "lists.h"
 #include <stdio.h>
 #include <string.h>
 
