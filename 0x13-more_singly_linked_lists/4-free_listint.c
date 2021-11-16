@@ -3,8 +3,8 @@
 #include <string.h>
 
 /**
- * add_nodeint - add the elements of a list_t list.
- * @head: list_t list.
+ * free_listint - frees memory that listint_t.
+ * @head: listint_t listint.
  *
  */
 void free_listint(listint_t *head)
