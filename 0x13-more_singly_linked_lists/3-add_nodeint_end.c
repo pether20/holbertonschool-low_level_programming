@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * add_nodeint - add the elements of a list_t list.
+ * add_nodeint_end - add the elements of a end list_t list.
  * @head: list_t list.
  * @n: integer n.
  * Return: Direction of nodes.
