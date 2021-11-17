@@ -3,9 +3,10 @@
 #include <string.h>
 
 /**
- * insert_nodeint_at_index - add the node in position idx of a listint_t list.
+ * delete_nodeint_at_index - deletes the node at
+ * index index of a listint_t linked lis.
  * @head: listint_t listint.
- * @idx: index node.
+ * @index: index node.
  * Return: Value 1 succeeded or -1 failed.
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
