@@ -7,19 +7,19 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-        unsigned int binary = 0;
+	unsigned int binary = 0;
 
-        if (!b)
-                return (0);
+	if (!b)
+		return (0);
 
-        while (*b)
-        {
-                if (*b != 48 && *b != 49)
-                        return (0);
-                binary = binary << 1;
-                if (*b == 49)
-                        binary = binary ^ 1;
-                b++;
-        }
-        return (binary);
+	while (*b)
+	{
+		if (*b != 48 && *b != 49)
+			return (0);
+		binary = binary << 1;
+		if (*b == 49)
+			binary = binary ^ 1;
+		b++;
+	}
+	return (binary);
 }
