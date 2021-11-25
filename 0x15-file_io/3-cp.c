@@ -21,46 +21,52 @@ int main(int ac, char **av)
 		exit(97);
 	}
 	fd1 = open(av[1], O_RDONLY);
-	if (fd1 == -1)	
+	if (fd1 == -1)
 	{	dprintf(STDERR_FILENO, "Error: Can't read to %s\n", av[1]);
 		exit(98);
 	}
-	fd2 = open(av[2], O_CREAT | O_WRONLY | O_APPEND | O_TRUNC, 0664); 
+	fd2 = open(av[2], O_CREAT | O_WRONLY | O_APPEND | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{       dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(98);
 	}
 	buf(fd1, fd2, av);
 	if (close(fd1) == -1 || close(fd2) == -1)
-		 dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
 	return (0);
 }
+
 /**
-  4  * main - copy file and other file
-  5  * @ac: pointer file
-  6  * @av: number od letters
-  7  * Return: Return succees or fail
-  8  */
+ * buf - buffer file read write
+ * @fd1: file
+ * @fd2: file
+ * @av: arguments
+ * Return: Return succees or fail
+ */
 void buf(int fd1, int fd2, char **av)
 {
 	char buf[1024];
 	int MAX_BUF = 1024, r = 0, w;
-	
-	while(1)
+
+	while (1)
 	{
-		 r = read(fd1, buf, MAX_BUF);
-		 if (r == 0)
-			 break;
-		 if (r == -1)
-		 {
-			  dprintf(STDERR_FILENO, "Error: Can't read to %s\n", av[1]);
-			  exit(98);
-		 }
-		 w = write(fd2, buf, r);
-		 if (w == -1)
-		 {
-			 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		exit(99);
-		 }
+		r = read(fd1, buf, MAX_BUF);
+
+		if (r == 0)
+			break;
+
+		if (r == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read to %s\n", av[1]);
+			exit(98);
+		}
+
+		w = write(fd2, buf, r);
+
+		if (w == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			exit(99);
+		}
 	}
 }
