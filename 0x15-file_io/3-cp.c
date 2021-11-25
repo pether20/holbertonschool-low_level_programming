@@ -28,11 +28,12 @@ int main(int ac, char **av)
 	fd2 = open(av[2], O_CREAT | O_WRONLY | O_APPEND | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{       dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		exit(98);
+		exit(99);
 	}
 	buf(fd1, fd2, av);
 	if (close(fd1) == -1 || close(fd2) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
+		exit(100);
 	return (0);
 }
 
