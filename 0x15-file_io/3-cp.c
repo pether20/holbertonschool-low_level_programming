@@ -13,7 +13,7 @@ void buf(int fd1, int fd2, char **av);
  */
 int main(int ac, char **av)
 {
-	int fd1, fd2;
+	int fd1, fd2, c1, c2;
 
 	if (ac != 3)
 	{
@@ -31,8 +31,14 @@ int main(int ac, char **av)
 		exit(99);
 	}
 	buf(fd1, fd2, av);
-	if (close(fd1) == -1 || close(fd2) == -1)
-	{	dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
+	c1 = close(fd1);
+	c2 = close(fd2);
+	if (c1 == -1)
+	{	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", c1);
+		exit(100);
+	}
+	if (c2 == -1)
+	{	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", c2);
 		exit(100);
 	}
 	return (0);
