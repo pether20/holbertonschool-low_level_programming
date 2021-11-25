@@ -32,8 +32,9 @@ int main(int ac, char **av)
 	}
 	buf(fd1, fd2, av);
 	if (close(fd1) == -1 || close(fd2) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
+	{	dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
 		exit(100);
+	}
 	return (0);
 }
 
